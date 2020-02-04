@@ -10,8 +10,22 @@ As a high populated city, Atlanta is an excellent place to start a new business,
 
 For our data we are taking into account the following:
 
-* Most common venues
 * Number of restaurants in the location
 * Number of Italian restaurants
 
-All this data will be obtained by using the  using Foursquare API
+For the data collection we  look in a radius of 15 km from the center of Atlanta. We look for the all the Italian places not only the restaurants. We use the word Italian as search query.
+
+* We use the Foursquare API to obtain the data related to the Italian places in Atlanta. 
+* We use Nominatim API to obtain the coordinates of the venues.
+
+## Methodology
+
+We use GitHub  repository as a database. We collect all the data and saved into a Pandas Dataframe which we have to filtered to keep only the features with the relevant information to our study. As we set a radius of 15km, we obtain also some venues out of the limits of Atlanta and we eliminate them, obtaining a new data frame.
+We have some categories like 'Boutique' that are totally out of the scope of our problem, in fact we are only interest in categories like 'Italian Restaurant' and 'Pizza Place'. Also, we have one NaN values and we are going to include the correct value manually. We used python folium library to visualize the location of the places on a map ofAtlanta.  We used latitude and longitude values to get the visual.
+We used unsupervised learning K-means algorithm to cluster the places and find zones to place our restaurant. K-Means algorithm is one of the most common cluster method of unsupervised learning. We used 3 clusters, and obtain the merged table with cluster labels for each place.
+
+## Results
+
+We obtain a map of Atlanta with the places of our study divided by clusters:
+
+
