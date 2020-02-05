@@ -27,5 +27,18 @@ We used unsupervised learning K-means algorithm to cluster the places and find z
 ## Results
 
 We obtain a map of Atlanta with the places of our study divided by clusters:
+The cluster violet is too far from the center of Atlanta and the locations are also sparse. Cluster red seems to be crowded with Italian Restaurants, therefore  we think that cluster green is the best possible place to our restaurant, due to is close to the center of the city and have only 3 Pizza Places and 3 Italian Restaurants.
+
+To be sure that we want to open our restaurant next to these locations, we are going to find the maximum distance of a place in this cluster to the center of the city and make a search in this radius of all the common Italian venues. The maximum distance is 3866m and we are going to look in this radius for up to 100 Italian venues. After we clean and filtered all the data, we obtain a new dataframe. Postal Code 30308 is the one with more Italian Restaurants and Pizza Places, Postal Code 30316 is out of our limits and Postal Code 30312 has only one Italian venue. Therefore we consider that the best locations for opening our restaurant are Postal Codes 30303 and 30307.
+
+## Discussion
+
+We used the Kmeans algorithm as part of this clustering study. Despite Atlanta is a big city due to our Foursquare account limitations we can't obtain all the data we wanted. 
+
+We also performed data analysis through this information by adding the coordinates of places and we ended the study by visualizing the data and clustering information on the Atlanta map. 
+
+## Conclusion
+
+Contrary as we expected the locations near to the center of the city where not crowded of Italian restaurant, making our decision easier. 
 
 
